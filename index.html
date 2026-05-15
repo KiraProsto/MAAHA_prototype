@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>МААНА</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- Бургер -->
+      <div class="burger"></div>
+
+      <!-- Логотип -->
+      <div class="header__center">
+        <a href="index.html" class="logo-link">
+          <img src="img/logo.svg" alt="Логотип" class="logo-img" />
+          <div class="logo">MAAHA</div>
+        </a>
+      </div>
+
+      <!-- ПК поиск -->
+      <div class="search-wrapper desktop-search">
+        <img src="img/search-icon.svg" class="search-icon" alt="" />
+        <input type="text" class="search" placeholder="Поиск" />
+      </div>
+
+      <!-- Иконки справа (только мобильные) -->
+      <div class="header-icons">
+        <img
+          src="img/search-icon.svg"
+          class="search-icon-small"
+          id="mobileSearchBtn" />
+        <a href="cart.html">
+          <img src="img/bag.svg" class="bag-icon" />
+        </a>
+      </div>
+
+      <!-- Мобильный поиск -->
+      <div class="mobile-search">
+        <input type="text" placeholder="Поиск" />
+        <div class="mobile-search-close">✕</div>
+      </div>
+
+      <!-- Навигация (ПК) -->
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="katalog.html">Каталог</a>
+        <a href="#delivery">О доставке</a>
+
+        <!-- КОРЗИНА ДЛЯ ПК -->
+        <a href="cart.html" class="nav-cart">
+          <img src="img/bag.svg" alt="Корзина" class="bag-icon" />
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <!-- БЕГУЩАЯ СТРОКА СВЕРХУ -->
+        <div class="ticker">
+          <div class="ticker__track">
+            <span class="ticker__text"
+              >MAAHA теперь с тобой. Добро пожаловать в ароматный дом.</span
+            >
+          </div>
+        </div>
+
+        <!-- ВИДЕО-ФОН -->
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="video/background.mp4" type="video/mp4" />
+        </video>
+
+        <!-- КОНТЕНТ -->
+        <div class="hero-content">
+          <h1 class="hero__title">MAAHA</h1>
+
+          <p class="hero__subtitle">Твой момент, наполненный собой.</p>
+
+          <a href="katalog.html" class="hero__btn">Каталог</a>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <h2 class="about__title">О НАС</h2>
+        <div class="about__row">
+          <div class="about__text">
+            <p class="about__p about__p--right">
+              Маана — это не просто слово, а состояние. Оно объединяет смысл,
+              суть и внутреннее значение — то, что ощущаешь, когда замолкаешь и
+              просто присутствуешь. В восточной философии «маана» — это скрытая
+              сущность за внешней формой: за лепестком розы — любовь, за треском
+              фитиля — покой, за мягким светом — возвращение домой.
+            </p>
+
+            <p class="about__p">
+              Мы создаём свечи, аромасаше и проводим мастер‑классы, вкладывая в
+              каждое изделие внимание, тепло рук и уважение к материалу. Когда
+              вы зажигаете свечу MAANA, начинается маленький ритуал — аромат
+              становится проводником в состояние «здесь и сейчас». Наш сайт —
+              это приглашение в ароматный дом, где каждый вечер и каждый фитиль
+              наполнены смыслом.
+            </p>
+          </div>
+          <div class="about__image">
+            <img src="img/workshop.jpg" alt="Мастерская MAANA" />
+          </div>
+        </div>
+      </section>
+
+      <section class="hits">
+        <h2 class="hits__title">ХИТ ПРОДАЖ</h2>
+
+        <div class="hits__list" id="hits-list"></div>
+
+        <a href="katalog.html" class="hits__link">Перейти в каталог →</a>
+      </section>
+
+      <section class="composition" id="composition">
+        <h2 class="composition__title">СОСТАВ СВЕЧЕЙ</h2>
+
+        <div class="composition__layout">
+          <!-- ЛЕВАЯ КОЛОНКА -->
+          <div class="composition__col left">
+            <div class="composition__item">
+              <div class="composition__item-header">
+                <img src="img/icons/oil.png" class="composition__icon" alt="" />
+                <h3 class="composition__name">Ароматические масла</h3>
+              </div>
+              <div class="composition__line"></div>
+              <p class="composition__text">
+                Профессиональные сертифицированные ароматические масла. <br />
+                Без вредных веществ и фталатов
+              </p>
+            </div>
+
+            <div class="composition__item">
+              <div class="composition__item-header">
+                <img src="img/icons/wax.png" class="composition__icon" alt="" />
+                <h3 class="composition__name">
+                  Натуральный воск <br />
+                  <span class="composition__text"
+                    >(соевый, кокосовый и пчелиный)</span
+                  >
+                </h3>
+              </div>
+              <div class="composition__line"></div>
+              <p class="composition__text">
+                Обеспечивает чистое и ровное горение без токсинов.<br />
+                Дольше держит аромат и создаёт мягкое, тёплое свечение.
+              </p>
+            </div>
+          </div>
+
+          <!-- ЦЕНТР -->
+          <div class="composition__center">
+            <img src="img/composition/candle.png" alt="Свеча MAANA" />
+          </div>
+
+          <!-- ПРАВАЯ КОЛОНКА -->
+          <div class="composition__col right">
+            <div class="composition__item">
+              <div class="composition__item-header">
+                <img
+                  src="img/icons/wick.png"
+                  class="composition__icon"
+                  alt="" />
+                <h3 class="composition__name">
+                  Натуральные фитили <br />
+                  <span class="composition__text"
+                    >(хлопковый и деревянный)</span
+                  >
+                </h3>
+              </div>
+              <div class="composition__line"></div>
+              <p class="composition__text">
+                Хлопковый — для мягкого пламени и раскрытия тонких ароматов.<br />
+                Деревянный — для нежного потрескивания живого огня.
+              </p>
+            </div>
+            <div class="composition__item">
+              <div class="composition__item-header">
+                <img src="img/icons/cup.png" class="composition__icon" alt="" />
+                <h3 class="composition__name">Прочный гипсовый стакан</h3>
+              </div>
+              <div class="composition__line"></div>
+              <p class="composition__text">
+                Ручная отливка, приятная текстура и высокая долговечность.<br />
+                Каждый стакан — уникальный элемент декора.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="delivery" id="delivery">
+        <h2 class="delivery__title">ДОСТАВКА И ОПЛАТА</h2>
+
+        <div class="delivery__steps">
+          <!-- ШАГ 1 -->
+          <div class="delivery__step step-1">
+            <img src="img/icons/step1.png" class="delivery__icon" alt="" />
+            <p class="delivery__text">Выберите свечу<br />и оформите заказ</p>
+          </div>
+
+          <img
+            src="img/icons/arrow.svg"
+            class="delivery__arrow arrow-1"
+            alt="" />
+
+          <!-- ШАГ 2 -->
+          <div class="delivery__step step-2">
+            <img src="img/icons/step2.png" class="delivery__icon" alt="" />
+            <p class="delivery__text">Оплатите<br />и выберите пункт выдачи</p>
+          </div>
+
+          <img
+            src="img/icons/arrow.svg"
+            class="delivery__arrow arrow-2"
+            alt="" />
+
+          <!-- ШАГ 3 -->
+          <div class="delivery__step step-3">
+            <img src="img/icons/step3.png" class="delivery__icon" alt="" />
+            <p class="delivery__text">Заберите свой заказ</p>
+          </div>
+        </div>
+
+        <p class="delivery__note">Доставка по всей РФ: СДЭК · WB · Ozon</p>
+      </section>
+
+      <section class="contacts" id="contacts">
+        <h2 class="contacts__title">КОНТАКТНЫЕ ДАННЫЕ</h2>
+
+        <div class="contacts__info">
+          <p class="contacts__phone">+7 (978) 527‑83‑75</p>
+          <p class="contacts__mail">juliya.ist0508@gmail.com</p>
+        </div>
+
+        <p class="contacts__subtitle">
+          Остались вопросы? Нужна запись? Напиши!
+        </p>
+
+        <div class="contacts__icons">
+          <img src="img/message/max.svg" alt="" class="contacts__icon" />
+          <img src="img/message/tg.svg" alt="" class="contacts__icon" />
+          <img src="img/message/vk.svg" alt="" class="contacts__icon" />
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <!-- ЛЕВАЯ ЧАСТЬ: ЛОГОТИП + НАЗВАНИЕ -->
+        <div class="footer__left">
+          <img src="img/logo.png" alt="Логотип" class="footer__logo-img" />
+          <div class="footer__logo-text">MAAHA</div>
+        </div>
+
+        <!-- ПРАВАЯ ЧАСТЬ: МЕНЮ -->
+        <div class="footer-menu">
+          <div class="footer-col">
+            <a href="index.html#home">Главная</a>
+            <a href="katalog.html">Каталог</a>
+          </div>
+
+          <div class="footer-col">
+            <a href="index.html#composition">Состав</a>
+            <a href="index.html#about">О нас</a>
+          </div>
+
+          <div class="footer-col">
+            <a href="index.html#delivery">Доставка</a>
+            <a href="index.html#contacts">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/header.js"></script>
+    <script type="module" src="js/products.js"></script>
+    <script src="js/ticker.js"></script>
+    <script type="module" src="js/hits.js"></script>
+  </body>
+</html>

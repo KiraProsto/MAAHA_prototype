@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAANA | Корзина</title>
+    <link rel="stylesheet" href="styles_cart.css" />
+  </head>
+
+  <body>
+    <!-- ШАПКА -->
+    <header class="header">
+      <!-- Бургер -->
+      <div class="burger"></div>
+
+      <!-- Логотип -->
+      <div class="header__center">
+        <a href="index.html" class="logo-link">
+          <img src="img/logo.svg" alt="Логотип" class="logo-img" />
+          <div class="logo">MAAHA</div>
+        </a>
+      </div>
+
+      <!-- ПК поиск -->
+      <div class="search-wrapper desktop-search">
+        <img src="img/search-icon.svg" class="search-icon" alt="" />
+        <input type="text" class="search" placeholder="Поиск" />
+      </div>
+
+      <!-- Иконки справа (только мобильные) -->
+      <div class="header-icons">
+        <img
+          src="img/search-icon.svg"
+          class="search-icon-small"
+          id="mobileSearchBtn" />
+        <a href="cart.html">
+          <img src="img/bag.svg" class="bag-icon" />
+        </a>
+      </div>
+
+      <!-- Мобильный поиск -->
+      <div class="mobile-search">
+        <input type="text" placeholder="Поиск" />
+        <div class="mobile-search-close">✕</div>
+      </div>
+
+      <!-- Навигация (ПК) -->
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="katalog.html">Каталог</a>
+        <a href="#delivery">О доставке</a>
+
+        <!-- КОРЗИНА ДЛЯ ПК -->
+        <a href="cart.html" class="nav-cart">
+          <img src="img/bag.svg" alt="Корзина" class="bag-icon" />
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="cart__title-wrap">
+        <!-- <div class="cart__line"></div> -->
+        <h2 class="cart__title">КОРЗИНА</h2>
+        <!-- <div class="cart__line"></div> -->
+      </div>
+
+      <div class="cart__layout">
+        <!-- ЛЕВАЯ ЧАСТЬ — ТОВАРЫ -->
+        <div class="cart__items" id="cartItems"></div>
+
+        <!-- ПРАВАЯ ЧАСТЬ — ИТОГО -->
+        <div class="cart__summary">
+          <h3 class="cart__summary-title">Ваш заказ</h3>
+
+          <p class="cart__summary-line">
+            Товаров: <span id="cartCount">0 шт</span>
+          </p>
+
+          <p class="cart__summary-line">
+            Итого: <span id="cartTotal">0 руб</span>
+          </p>
+
+          <button class="cart__btn">Оформить заказ</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <!-- ЛЕВАЯ ЧАСТЬ: ЛОГОТИП + НАЗВАНИЕ -->
+        <div class="footer__left">
+          <img src="img/logo.png" alt="Логотип" class="footer__logo-img" />
+          <div class="footer__logo-text">MAAHA</div>
+        </div>
+
+        <!-- ПРАВАЯ ЧАСТЬ: МЕНЮ -->
+        <div class="footer-menu">
+          <div class="footer-col">
+            <a href="index.html#home">Главная</a>
+            <a href="katalog.html">Каталог</a>
+          </div>
+
+          <div class="footer-col">
+            <a href="index.html#composition">Состав</a>
+            <a href="index.html#about">О нас</a>
+          </div>
+
+          <div class="footer-col">
+            <a href="index.html#delivery">Доставка</a>
+            <a href="index.html#contacts">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/cartPage.js"></script>
+  </body>
+</html>

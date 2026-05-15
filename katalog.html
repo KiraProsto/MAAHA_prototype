@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles_katalog.css" />
+    <title>МААНА | Каталог</title>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Бургер -->
+      <div class="burger"></div>
+
+      <!-- Логотип -->
+      <div class="header__center">
+        <a href="index.html" class="logo-link">
+          <img src="img/logo.svg" alt="Логотип" class="logo-img" />
+          <div class="logo">MAAHA</div>
+        </a>
+      </div>
+
+      <!-- ПК поиск -->
+      <div class="search-wrapper desktop-search">
+        <img src="img/search-icon.svg" class="search-icon" alt="" />
+        <input type="text" class="search" placeholder="Поиск" />
+      </div>
+
+      <!-- Иконки справа (только мобильные) -->
+      <div class="header-icons">
+        <img
+          src="img/search-icon.svg"
+          class="search-icon-small"
+          id="mobileSearchBtn" />
+        <a href="cart.html">
+          <img src="img/bag.svg" class="bag-icon" />
+        </a>
+      </div>
+
+      <!-- Мобильный поиск -->
+      <div class="mobile-search">
+        <input type="text" placeholder="Поиск" />
+        <div class="mobile-search-close">✕</div>
+      </div>
+
+      <!-- Навигация (ПК) -->
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="katalog.html">Каталог</a>
+        <a href="#delivery">О доставке</a>
+
+        <!-- КОРЗИНА ДЛЯ ПК -->
+        <a href="cart.html" class="nav-cart">
+          <img src="img/bag.svg" alt="Корзина" class="bag-icon" />
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="catalog" class="catalog">
+        <div class="catalog__title-wrap">
+          <div class="catalog__line"></div>
+          <h2 class="catalog__title">КАТАЛОГ</h2>
+          <div class="catalog__line"></div>
+        </div>
+
+        <div class="catalog__grid">
+          <!-- Левый большой блок -->
+          <a href="#holders" class="catalog__item catalog__item--big">
+            <video src="video/aroma.mp4" autoplay muted loop></video>
+            <div class="catalog__overlay">Ароматические свечи</div>
+          </a>
+
+          <!-- Правая колонка -->
+          <div class="catalog__right">
+            <a href="#master" class="catalog__item catalog__item--square">
+              <video src="video/master.mp4" autoplay muted loop></video>
+              <div class="catalog__overlay">Мастер‑классы</div>
+            </a>
+
+            <a href="#interior" class="catalog__item catalog__item--square">
+              <video src="video/interior.mp4" autoplay muted loop></video>
+              <div class="catalog__overlay">Интерьерные свечи</div>
+            </a>
+
+            <a href="#sachets" class="catalog__item catalog__item--wide">
+              <video src="video/sashe.mp4" autoplay muted loop></video>
+              <div class="catalog__overlay">Аромасаше</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- МАСТЕР-КЛАССЫ -->
+      <section class="master" id="master">
+        <div class="master__title-wrap">
+          <h2 class="master__title">МАСТЕР‑КЛАССЫ</h2>
+          <div class="master__line"></div>
+        </div>
+
+        <div class="master__cards" id="masterCards"></div>
+      </section>
+
+      <!-- Интерьер СВЕЧИ -->
+      <section class="interior" id="interior">
+        <div class="interior__title-wrap">
+          <h2 class="interior__title">ИНТЕРЬЕРНЫЕ СВЕЧИ</h2>
+          <div class="interior__line"></div>
+        </div>
+
+        <div class="interior__grid" id="interiorGrid"></div>
+      </section>
+
+      <!-- Арома -->
+      <section class="holders" id="holders">
+        <div class="interior__title-wrap">
+          <h2 class="interior__title">АРОМАТИЧЕСКИЕ СВЕЧИ</h2>
+          <div class="interior__line"></div>
+        </div>
+
+        <div class="interior__grid" id="holdersGrid"></div>
+      </section>
+
+      <!-- АРОМОСАШЕ -->
+      <section class="sachets" id="sachets">
+        <div class="interior__title-wrap">
+          <h2 class="interior__title">АРОМОСАШЕ</h2>
+          <div class="interior__line"></div>
+        </div>
+
+        <div class="interior__grid" id="sachetsGrid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <!-- ЛЕВАЯ ЧАСТЬ: ЛОГОТИП + НАЗВАНИЕ -->
+        <div class="footer__left">
+          <img src="img/logo.png" alt="Логотип" class="footer__logo-img" />
+          <div class="footer__logo-text">MAAHA</div>
+        </div>
+
+        <!-- ПРАВАЯ ЧАСТЬ: МЕНЮ -->
+        <div class="footer-menu">
+          <div class="footer-col">
+            <a href="index.html#home">Главная</a>
+            <a href="katalog.html">Каталог</a>
+          </div>
+
+          <div class="footer-col">
+            <a href="index.html#composition">Состав</a>
+            <a href="index.html#about">О нас</a>
+          </div>
+
+          <div class="footer-col">
+            <a href="index.html#delivery">Доставка</a>
+            <a href="index.html#contacts">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <!-- КРЕСТИК -->
+        <div class="modal__close" id="modalClose">×</div>
+
+        <!-- ЛЕВАЯ ЧАСТЬ — ГАЛЕРЕЯ -->
+        <div class="modal__left">
+          <div class="modal__image-wrap">
+            <img id="modalMainImage" src="" alt="" />
+
+            <!-- СТРЕЛКИ -->
+            <div class="modal__arrow modal__arrow--left" id="modalPrev">‹</div>
+            <div class="modal__arrow modal__arrow--right" id="modalNext">›</div>
+          </div>
+
+          <!-- КРУЖОЧКИ -->
+          <div class="modal__dots" id="modalDots"></div>
+        </div>
+
+        <!-- ПРАВАЯ ЧАСТЬ — ТЕКСТ -->
+        <div class="modal__right">
+          <h3 class="modal__title" id="modalTitle"></h3>
+          <p class="modal__desc" id="modalDesc"></p>
+
+          <p class="modal__info">
+            <strong>Возраст:</strong> <span id="modalAge"></span>
+          </p>
+          <p class="modal__info">
+            <strong>Время:</strong> <span id="modalDuration"></span>
+          </p>
+          <p class="modal__info">
+            <strong>Цена:</strong> <span id="modalPrice"></span>
+          </p>
+
+          <p class="modal__info-tel">
+            <strong>Записаться:</strong> +7 (978) 527‑83‑75
+          </p>
+
+          <div class="modal__socials">
+            <img src="img/message/max.svg" alt="" />
+            <img src="img/message/tg.svg" alt="" />
+            <img src="img/message/vk.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- МОДАЛКА ТОВАРА -->
+    <div class="product-modal" id="productModal">
+      <div class="product-modal__content">
+        <div class="product-modal__close" id="productModalClose">×</div>
+
+        <!-- ЛЕВАЯ ЧАСТЬ -->
+        <div class="product-modal__left">
+          <div class="product-modal__image-wrap">
+            <img id="productModalMainImage" src="" alt="" />
+            <div
+              class="product-modal__arrow product-modal__arrow--left"
+              id="productModalPrev">
+              ‹
+            </div>
+            <div
+              class="product-modal__arrow product-modal__arrow--right"
+              id="productModalNext">
+              ›
+            </div>
+          </div>
+
+          <div class="product-modal__dots" id="productModalDots"></div>
+        </div>
+
+        <!-- ПРАВАЯ ЧАСТЬ -->
+        <div class="product-modal__right">
+          <h3 class="product-modal__title" id="productModalTitle"></h3>
+
+          <p class="product-modal__desc" id="productModalDesc"></p>
+
+          <p class="product-modal__info"><strong>Преимущества:</strong></p>
+          <p class="product-modal__text" id="productModalAdvantages"></p>
+
+          <p class="product-modal__info"><strong>Характеристики:</strong></p>
+          <p class="product-modal__text" id="productModalCharacteristics"></p>
+
+          <!-- КНОПКА / СЧЁТЧИК -->
+          <div class="product-modal__btn" id="productModalBtn">В корзину</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="to-top" id="toTopBtn">↑</button>
+
+    <!-- Подключение JS -->
+    <script type="module" src="js/masterCard.js"></script>
+    <script type="module" src="js/productsRender.js"></script>
+    <script type="module" src="js/holdersRender.js"></script>
+    <script type="module" src="js/sachetsRender.js"></script>
+  </body>
+</html>

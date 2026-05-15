@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles_checkout.css" />
+    <title>Оформление заказа</title>
+  </head>
+
+  <body>
+    <!-- ТВОЯ ШАПКА -->
+    <header class="header">
+      <!-- Бургер -->
+      <div class="burger"></div>
+
+      <!-- Логотип -->
+      <div class="header__center">
+        <a href="index.html" class="logo-link">
+          <img src="img/logo.svg" alt="Логотип" class="logo-img" />
+          <div class="logo">MAAHA</div>
+        </a>
+      </div>
+
+      <!-- ПК поиск -->
+      <div class="search-wrapper desktop-search">
+        <img src="img/search-icon.svg" class="search-icon" alt="" />
+        <input type="text" class="search" placeholder="Поиск" />
+      </div>
+
+      <!-- Иконки справа (только мобильные) -->
+      <div class="header-icons">
+        <img
+          src="img/search-icon.svg"
+          class="search-icon-small"
+          id="mobileSearchBtn" />
+        <a href="cart.html">
+          <img src="img/bag.svg" class="bag-icon" />
+        </a>
+      </div>
+
+      <!-- Мобильный поиск -->
+      <div class="mobile-search">
+        <input type="text" placeholder="Поиск" />
+        <div class="mobile-search-close">✕</div>
+      </div>
+
+      <!-- Навигация (ПК) -->
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="katalog.html">Каталог</a>
+        <a href="#delivery">О доставке</a>
+
+        <!-- КОРЗИНА ДЛЯ ПК -->
+        <a href="cart.html" class="nav-cart">
+          <img src="img/bag.svg" alt="Корзина" class="bag-icon" />
+        </a>
+      </nav>
+    </header>
+
+    <main class="checkout">
+      <h1 class="checkout__title">ОФОРМЛЕНИЕ ЗАКАЗА</h1>
+
+      <div class="checkout__layout">
+        <!-- ЛЕВАЯ ЧАСТЬ — ФОРМА -->
+        <div class="checkout__form">
+          <input
+            type="text"
+            id="fio"
+            class="input-full"
+            placeholder="ФИО получателя" />
+
+          <div class="form-row">
+            <div class="form-col">
+              <input type="text" id="phone" placeholder="Ваш номер телефона" />
+            </div>
+
+            <div class="form-col">
+              <input type="text" id="email" placeholder="Ваш e-mail" />
+            </div>
+          </div>
+
+          <h3 class="delivery-title">Доставка</h3>
+
+          <div class="form-row">
+            <div class="form-col">
+              <input type="text" id="city" placeholder="Город" />
+            </div>
+
+            <div class="form-col">
+              <input type="text" id="street" placeholder="Улица" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <input type="text" id="house" placeholder="Дом" />
+            </div>
+
+            <div class="form-col">
+              <input type="text" id="flat" placeholder="Квартира / Офис" />
+            </div>
+          </div>
+
+          <div class="delivery-row">
+            <label
+              ><input type="radio" name="delivery" value="СДЭК" /> СДЭК (2
+              дня)</label
+            >
+            <label
+              ><input type="radio" name="delivery" value="WB" /> WB (2
+              дня)</label
+            >
+            <label
+              ><input type="radio" name="delivery" value="OZON" /> OZON (2
+              дня)</label
+            >
+          </div>
+
+          <button class="checkout__btn" id="submitOrder">Заказать</button>
+        </div>
+
+        <!-- ПРАВАЯ ЧАСТЬ — ТОВАРЫ -->
+        <div class="checkout__summary">
+          <div id="checkoutItems"></div>
+
+          <div class="checkout__total">
+            <p>Цена за товары: <span id="sumProducts">0 руб</span></p>
+            <p>Доставка: <span id="sumDelivery">0 руб</span></p>
+            <p class="checkout__total-final">
+              Итого: <span id="sumFinal">0 руб</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <!-- ЛЕВАЯ ЧАСТЬ: ЛОГОТИП + НАЗВАНИЕ -->
+        <div class="footer__left">
+          <img src="img/logo.png" alt="Логотип" class="footer__logo-img" />
+          <div class="footer__logo-text">MAAHA</div>
+        </div>
+
+        <!-- ПРАВАЯ ЧАСТЬ: МЕНЮ -->
+        <div class="footer-menu">
+          <div class="footer-col">
+            <a href="index.html#home">Главная</a>
+            <a href="katalog.html">Каталог</a>
+          </div>
+
+          <div class="footer-col">
+            <a href="index.html#composition">Состав</a>
+            <a href="index.html#about">О нас</a>
+          </div>
+
+          <div class="footer-col">
+            <a href="index.html#delivery">Доставка</a>
+            <a href="index.html#contacts">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/checkout.js"></script>
+  </body>
+</html>

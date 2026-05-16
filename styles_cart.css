@@ -719,6 +719,7 @@ main {
   background: #63402a;
   padding: 20px 50px;
   color: #fff;
+  margin-top: auto;
 }
 
 .footer__inner {

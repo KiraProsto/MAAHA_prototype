@@ -1348,97 +1348,190 @@ body.modal-open {
   color: #fff;
 }
 
+/* ------------------ ПЛАНШЕТЫ (до 1024px) ------------------ */
 @media (max-width: 1024px) {
   .modal__content,
   .product-modal__content {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding: 50px 80px;
+    padding: 50px 60px;
     max-height: 90vh;
+    width: 90%;
   }
 
-  /* Фото по центру */
-  .modal__left,
-  .product-modal__left {
-    align-items: center;
-  }
-
+  /* Фото */
   .modal__image-wrap,
   .product-modal__image-wrap {
-    width: 230px;
-    height: 230px;
+    width: 260px;
+    height: 260px;
+    border-radius: 25px;
   }
 
-  /* Правая часть — тоже колонка */
+  /* Правая часть */
   .modal__right,
   .product-modal__right {
     max-width: 100%;
     padding-right: 0;
-    text-align: center; /* заголовок по центру */
-  }
-
-  /* Название по центру */
-  .modal__title,
-  .product-modal__title {
     text-align: center;
   }
 
-  /* Описание по левому краю */
+  .modal__title,
+  .product-modal__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
   .modal__desc,
   .product-modal__desc,
-  .product-modal__text,
-  .modal__info {
+  .product-modal__text {
+    font-size: 15px;
     text-align: left;
   }
 
-  /* Кнопка по центру */
+  /* Кнопка */
   .product-modal__btn {
     margin-left: auto;
     margin-right: auto;
     max-width: 300px;
+    font-size: 15px;
+    padding: 10px 0;
+    height: 40px;
   }
 
-  /* Соцсети по центру */
-  .modal__socials {
-    justify-content: center;
+  /* Счётчик как кнопка */
+  .product-modal__btn.counter {
+    padding: 10px 15px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .product-modal__btn .counter-btn {
+    width: 28px;
+    height: 18px;
+    font-size: 18px;
+  }
+
+  .product-modal__btn .counter-value {
+    font-size: 15px;
+  }
+
+  /* Соцсети */
+  .modal__socials img {
+    width: 34px;
+    height: 34px;
   }
 }
 
+/* ------------------ ТЕЛЕФОНЫ (до 768px) ------------------ */
 @media (max-width: 768px) {
   .modal__content,
   .product-modal__content {
-    padding: 40px 60px;
-    gap: 30px;
+    padding: 40px 40px;
+    gap: 25px;
+    width: 92%;
   }
 
   .modal__image-wrap,
   .product-modal__image-wrap {
     width: 200px;
     height: 200px;
+    border-radius: 20px;
   }
 
   .modal__title,
   .product-modal__title {
     font-size: 20px;
-    text-align: center;
   }
 
   .modal__desc,
   .product-modal__desc,
   .product-modal__text {
     font-size: 14px;
-    text-align: left;
   }
 
   .product-modal__btn {
     max-width: 260px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 13px;
+    padding: 8px 0;
+    height: 34px;
   }
 
-  .modal__socials {
-    justify-content: center;
+  .product-modal__btn.counter {
+    padding: 8px 12px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .product-modal__btn .counter-btn {
+    width: 26px;
+    height: 16px;
+    font-size: 16px;
+  }
+
+  .product-modal__btn .counter-value {
+    font-size: 13px;
+  }
+
+  .modal__socials img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ------------------ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 420px) ------------------ */
+@media (max-width: 420px) {
+  .modal__content,
+  .product-modal__content {
+    padding: 30px 25px;
+    gap: 20px;
+    width: 95%;
+  }
+
+  .modal__image-wrap,
+  .product-modal__image-wrap {
+    width: 170px;
+    height: 170px;
+    border-radius: 18px;
+  }
+
+  .modal__title,
+  .product-modal__title {
+    font-size: 18px;
+  }
+
+  .modal__desc,
+  .product-modal__desc,
+  .product-modal__text {
+    font-size: 13px;
+  }
+
+  .product-modal__btn {
+    max-width: 230px;
+    font-size: 12px;
+    padding: 7px 0;
+    height: 32px;
+  }
+
+  .product-modal__btn.counter {
+    padding: 7px 10px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .product-modal__btn .counter-btn {
+    width: 24px;
+    height: 15px;
+    font-size: 14px;
+  }
+
+  .product-modal__btn .counter-value {
+    font-size: 12px;
+  }
+
+  .modal__socials img {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -1613,7 +1706,7 @@ body.modal-open {
 }
 
 /* ------------------ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 420px) ------------------ */
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .footer {
     padding: 20px 15px;
   }

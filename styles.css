@@ -1793,7 +1793,7 @@ main {
 }
 
 /* ------------------ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 420px) ------------------ */
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .footer {
     padding: 20px 15px;
   }

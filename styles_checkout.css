@@ -25,12 +25,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background: #fff;
   color: #000;
   font-family: var(--font-main);
@@ -42,9 +49,46 @@ main {
   padding: 20px 80px;
 }
 
-@media (max-width: 1000px) {
+/* Планшеты */
+@media (max-width: 1024px) {
+  body {
+    padding-top: 80px;
+  }
+
   main {
-    padding: 10px 60px;
+    padding: 15px 40px;
+  }
+
+  main > * {
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+
+  main {
+    padding: 12px 20px;
+  }
+
+  main > * {
+    padding-right: 0px;
+    box-sizing: border-box;
+  }
+}
+
+/* Маленькие телефоны (iPhone SE, Xiaomi 360–420px) */
+@media (max-width: 420px) {
+  body {
+    padding-top: 40px;
+  }
+
+  main {
+    padding: 10px 12px;
   }
 }
 
@@ -188,11 +232,12 @@ main {
 }
 
 .mobile-search input {
+  font-family: var(--font-main);
   width: 100%;
-  padding: 12px 20px;
-  border-radius: 40px;
+  padding: 8px 18px;
+  border-radius: 35px;
   border: 1px solid #000;
-  font-size: 16px;
+  font-size: 15px;
   transition: all 0.3s ease;
 }
 
@@ -203,7 +248,7 @@ main {
 }
 
 .mobile-search-close {
-  font-size: 22px;
+  font-size: 18px;
   cursor: pointer;
   opacity: 0.7;
   transition: 0.2s;
@@ -220,49 +265,50 @@ main {
   }
 
   .header {
-    padding: 20px 30px;
+    padding: 18px 30px;
     display: grid;
     grid-template-columns: 40px 1fr 80px;
   }
 
-  /* ПК поиск скрываем */
+  .logo-img {
+    height: 42px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
   .search-wrapper {
     display: none;
   }
 
-  /* ПК корзину скрываем */
   .nav-cart {
     display: none;
   }
 
-  /* мобильные иконки показываем */
   .header-icons {
     display: flex;
   }
 
-  /* бургер показываем */
   .burger {
     display: block;
   }
 
-  /* логотип по центру */
   .header__center {
     display: flex;
     justify-content: center;
   }
 
-  /* мобильное меню */
   .nav {
     display: none;
     flex-direction: column;
-    gap: 25px;
+    gap: 22px;
     position: absolute;
     top: 100%;
-    margin-top: 0;
     left: 0;
     width: 100%;
     background: #fff;
-    padding: 30px;
+    padding: 25px;
     border-top: 1px solid #eee;
   }
 
@@ -276,16 +322,76 @@ main {
     transform: translateY(0);
   }
 }
+
 /* ------------------ ТЕЛЕФОНЫ ------------------ */
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
+  .header {
+    display: flex !important; /* перебиваем grid */
+    grid-template-columns: none !important; /* отключаем колонки */
+    padding: 10px 12px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
   }
 
-  .mobile-search.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
+  .logo-img {
+    height: 30px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .header-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .burger {
+    width: 22px;
+    height: 22px;
+  }
+
+  .mobile-search input {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 32px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .logo-img {
+    height: 26px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .header-icons {
+    gap: 8px;
+  }
+
+  .burger {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-icons img,
+  .header-icons svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .mobile-search input {
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 28px;
   }
 }
 
@@ -491,21 +597,77 @@ main {
   }
 
   .checkout__layout {
-    gap: 50px;
+    gap: 60px;
   }
 
   .checkout__form {
     flex: 0 0 65%;
     max-width: 65%;
+    gap: 20px;
+  }
+
+  .checkout__form input {
+    padding: 12px 25px;
+    font-size: 15px;
+  }
+
+  .form-row {
+    gap: 25px;
+  }
+
+  .delivery-title {
+    font-size: 20px;
+  }
+
+  .delivery-row {
+    gap: 30px;
+  }
+
+  .delivery-row input[type='radio'] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .checkout__btn {
+    padding: 14px 60px;
+    font-size: 17px;
   }
 
   .checkout__summary {
     flex: 0 0 35%;
     max-width: 35%;
+    padding: 18px;
+    gap: 12px;
   }
 
-  .delivery-row {
-    gap: 30px;
+  .checkout-item {
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .checkout-item__img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .checkout-item__name {
+    font-size: 15px;
+  }
+
+  .checkout-item__count {
+    font-size: 13px;
+  }
+
+  .checkout-item__price {
+    font-size: 15px;
+  }
+
+  .checkout__total {
+    font-size: 14px;
+  }
+
+  .checkout__total-final {
+    font-size: 17px;
   }
 }
 
@@ -522,7 +684,7 @@ main {
     margin-bottom: 25px;
   }
 
-  /* Layout в колонку */
+  /* Layout → колонка */
   .checkout__layout {
     flex-direction: column;
     gap: 40px;
@@ -530,30 +692,140 @@ main {
 
   .checkout__form,
   .checkout__summary {
-    flex: none;
     max-width: 100%;
   }
 
-  /* Две колонки → одна */
+  /* Inputs */
+  .checkout__form input {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  /* Two columns → one */
   .form-row {
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
+  }
+
+  .delivery-title {
+    font-size: 18px;
   }
 
   .delivery-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 12px;
   }
 
+  .delivery-row input[type='radio'] {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Button */
   .checkout__btn {
     width: 100%;
     text-align: center;
-    padding: 15px 0;
+    padding: 14px 0;
+    font-size: 16px;
+  }
+
+  /* Summary */
+  .checkout__summary {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .checkout-item {
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .checkout-item__img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .checkout-item__name {
+    font-size: 14px;
+  }
+
+  .checkout-item__count {
+    font-size: 13px;
+  }
+
+  .checkout-item__price {
+    font-size: 14px;
+  }
+
+  .checkout__total {
+    font-size: 14px;
+  }
+
+  .checkout__total-final {
+    font-size: 16px;
   }
 }
 
-/* ------------------ FOOTER ------------------ */
+/* ===========================
+   SMALL MOBILE (до 420px)
+   =========================== */
+@media (max-width: 420px) {
+  .checkout {
+    padding: 15px;
+  }
+
+  .checkout__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .checkout__form input {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .delivery-title {
+    font-size: 16px;
+  }
+
+  .checkout__btn {
+    padding: 12px 0;
+    font-size: 15px;
+  }
+
+  .checkout-item {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .checkout-item__img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .checkout-item__name {
+    font-size: 13px;
+  }
+
+  .checkout-item__count {
+    font-size: 12px;
+  }
+
+  .checkout-item__price {
+    font-size: 13px;
+  }
+
+  .checkout__total {
+    font-size: 13px;
+  }
+
+  .checkout__total-final {
+    font-size: 15px;
+  }
+}
+
+/* ------------ футер ------------ */
 /* -футер */
 .footer {
   background: #63402a;
@@ -592,7 +864,7 @@ main {
 
 /* ПРАВАЯ ЧАСТЬ — МЕНЮ */
 .footer-menu {
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   gap: 120px; /* расстояние между колонками */
 }
@@ -616,6 +888,7 @@ main {
   color: #f2b13b;
 }
 
+/* ------------------ ПЛАНШЕТЫ (до 1024px) ------------------ */
 @media (max-width: 1024px) {
   .footer {
     padding: 20px 30px;
@@ -623,28 +896,36 @@ main {
 
   .footer__inner {
     padding: 0 20px;
-    gap: 40px;
+    gap: 35px;
   }
 
+  /* ЛОГОТИП */
   .footer__logo-img {
     width: 60px;
     height: 60px;
   }
 
   .footer__logo-text {
-    font-size: 60px;
+    font-size: 58px; /* было 60 */
+    letter-spacing: 1.5px;
   }
 
+  /* МЕНЮ */
   .footer-menu {
-    gap: 60px;
-    font-size: 15px;
+    gap: 55px; /* было 60 */
+    font-size: 16px;
   }
 
   .footer-col {
-    gap: 12px;
+    gap: 12px; /* было 15 */
+  }
+
+  .footer-col a {
+    font-size: 15px;
   }
 }
 
+/* ------------------ ТЕЛЕФОНЫ (до 768px) ------------------ */
 @media (max-width: 768px) {
   .footer {
     padding: 25px 20px;
@@ -652,41 +933,71 @@ main {
 
   .footer__inner {
     padding: 0;
-    gap: 30px;
+    gap: 25px;
   }
 
-  /* Логотип */
+  /* ЛОГОТИП */
   .footer__logo-img {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
   }
 
   .footer__logo-text {
-    font-size: 38px;
+    font-size: 34px; /* было 38 */
     letter-spacing: 1px;
   }
 
-  /* Меню — остаётся в две колонки */
+  /* МЕНЮ — остаётся в две колонки */
   .footer-menu {
-    gap: 40px; /* было 120px → уменьшили */
+    gap: 30px; /* было 40 */
     font-size: 14px;
   }
 
   .footer-col {
-    gap: 8px; /* было 15px → уменьшили */
+    gap: 7px; /* было 8 */
   }
 
   .footer-col a {
-    font-size: 14px;
+    font-size: 13.5px;
   }
 }
 
-/* Убираем синий фон автозаполнения */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
-  box-shadow: 0 0 0 1000px #fff inset !important;
-  -webkit-text-fill-color: #000 !important;
-  border: 1px solid #ccc !important;
+/* ------------------ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 420px) ------------------ */
+@media (max-width: 430px) {
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer__left {
+    gap: 5px;
+  }
+
+  .footer__inner {
+    gap: 20px;
+  }
+
+  /* ЛОГОТИП */
+  .footer__logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer__logo-text {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  /* МЕНЮ */
+  .footer-menu {
+    gap: 22px;
+    font-size: 11px;
+  }
+
+  .footer-col {
+    gap: 6px;
+  }
+
+  .footer-col a {
+    font-size: 11px;
+  }
 }

@@ -1212,6 +1212,13 @@ body.modal-open {
   object-fit: cover;
 }
 
+#modalMainVideo {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
 /* ---------------------- СТРЕЛКИ ---------------------- */
 .modal__arrow,
 .product-modal__arrow {

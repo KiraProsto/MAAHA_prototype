@@ -29,7 +29,7 @@ sachets.forEach((product) => {
   sachetsGrid.appendChild(card);
 });
 
-/* ---------------- КОРЗИНА ДЛЯ АРОМОСАШЕ ---------------- */
+/* ---------------- КОРЗИНА ДЛЯ АРОМАСАШЕ ---------------- */
 
 sachetsGrid.addEventListener('click', (e) => {
   const btn = e.target.closest('.product-card__btn');

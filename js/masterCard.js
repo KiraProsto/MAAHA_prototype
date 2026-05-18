@@ -51,7 +51,14 @@ function openModal(item) {
   modalDuration.textContent = item.duration;
   modalPrice.textContent = item.price || '—';
 
-  currentImages = [item.mainImage, ...(item.images || [])];
+  currentImages = [
+    { type: 'image', src: item.mainImage },
+    ...(item.images || []).map((src) => ({
+      type: src.endsWith('.mp4') ? 'video' : 'image',
+      src,
+    })),
+  ];
+
   currentIndex = 0;
 
   updateGallery();
@@ -59,7 +66,23 @@ function openModal(item) {
 
 /* Обновление галереи */
 function updateGallery() {
-  modalMainImage.src = currentImages[currentIndex];
+  const item = currentImages[currentIndex];
+
+  const img = document.getElementById('modalMainImage');
+  const video = document.getElementById('modalMainVideo');
+
+  if (item.type === 'image') {
+    img.style.display = 'block';
+    video.style.display = 'none';
+    img.src = item.src;
+  } else {
+    img.style.display = 'none';
+    video.style.display = 'block';
+    video.src = item.src;
+
+    video.muted = true;
+    video.play().catch(() => {});
+  }
 
   modalDots.innerHTML = '';
   currentImages.forEach((_, i) => {

@@ -1,7 +1,7 @@
 export const sachets = [
   {
     id: 201,
-    name: 'Аромосаше «Ваниль и хлопок»',
+    name: 'Аромасаше «Ваниль и хлопок»',
     price: '450 руб',
     mainImage: 'img/sachets/main.png',
     gallery: [],

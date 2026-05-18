@@ -654,6 +654,13 @@ main {
   object-fit: cover;
 }
 
+.about__image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
   .about {
